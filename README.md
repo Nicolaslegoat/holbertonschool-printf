@@ -6,3 +6,4 @@
 
 Nous sommes authorisés a utiliser plusieurs editeurs tel que VI , VIM ainsi que EMACS.
 Nous utiliserons la commande (gcc) qui utilise les options (-Wall -Werror -Wextra -pedantic -std=gnu89) pour compiler sur Ubuntu 20.
+
