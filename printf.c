@@ -27,15 +27,20 @@ int _printf(const char *format, ...)
 		}
 		else if (format[list + 1] == 's')
 		{
-			int r_val = _string(va_arg(args, char *));
+			int r_value = _string(va_arg(args, char *));
 
 			list++;
 
-			cmp += (r_val - 1);
+			cmp += (r_value - 1);
 		}
 		else if (format[list + 1] == '%')
 		{
 			_myputchar('%');
+			list++;
+		}
+		else if (format[list + 1] == 'd') || (format[list + 1] == 'i')
+		{
+			_integers((va_arg(args, int) + '0');
 			list++;
 		}
 		cmp += 1;
