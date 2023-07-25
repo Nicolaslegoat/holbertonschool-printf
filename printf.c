@@ -34,11 +34,6 @@ int _printf(const char *format, ...)
 			_myputchar('%');
 			list++;
 		}
-		else if (format[list + 1] == 'd' || format[list + 1] == 'i')
-		{
-			_integers((va_arg(args, int) + '0'));
-			list++;
-		}
 		cmp += 1;
 	}
 	return (cmp);
