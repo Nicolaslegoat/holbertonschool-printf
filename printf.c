@@ -4,7 +4,6 @@
 /**
  * _printf - function output the format
  * @format: pointer use to
- *
  * Return: success.
  */
 int _printf(const char *format, ...)
@@ -17,9 +16,7 @@ int _printf(const char *format, ...)
 	for (; format[list] != '\0'; list++)
 	{
 		if (format[list] != '%')
-		{
-			_myputchar(format[list]);
-		}
+		_myputchar(format[list]);
 		else if (format[list + 1] == 'c')
 		{
 			_myputchar(va_arg(args, int));
@@ -30,7 +27,6 @@ int _printf(const char *format, ...)
 			int r_value = _string(va_arg(args, char *));
 
 			list++;
-
 			cmp += (r_value - 1);
 		}
 		else if (format[list + 1] == '%')
@@ -38,9 +34,9 @@ int _printf(const char *format, ...)
 			_myputchar('%');
 			list++;
 		}
-		else if (format[list + 1] == 'd') || (format[list + 1] == 'i')
+		else if (format[list + 1] == 'd' || format[list + 1] == 'i')
 		{
-			_integers((va_arg(args, int) + '0');
+			_integers((va_arg(args, int) + '0'));
 			list++;
 		}
 		cmp += 1;
