@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int index = 0, cmp = 0, cmp_func = 0;
+	int index = 0, cmp = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -18,24 +18,13 @@ int _printf(const char *format, ...)
 	{
 		if (format[index] == '%')
 		{
-			if (!(format[index + 1] == ' ') && !format[index + 2])
-			{
-				cmp = -1;
-				break;
-			}
-			cmp_func += get_func(format[index + 1], args);
-			if (cmp_func == 0)
-				cmp += _myputchar(format[index + 1]);
-			if (cmp_func == -1)
-				cmp = -1;
+			cmp += get_func(format[index + 1], args);
 			index++;
 		}
 		else
-(cmp == -1) ? (_myputchar(format[index])) : (cmp += _myputchar(format[index]));
-		if (format[index] == '\0')
-			break;
-		if (cmp != -1)
-			cmp += cmp_func;
+		{
+			cmp += _myputchar(format[index]);
+		}
 	}
 	va_end(args);
 	return (cmp);
