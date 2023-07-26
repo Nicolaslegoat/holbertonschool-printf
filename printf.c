@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdlib.h>
 /**
  * _printf - function output the format
  * @format: pointer use to
@@ -8,6 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
+<<<<<<< HEAD
 	unsigned int list = 0, cmp = 0;
 	va_list args;
 
@@ -38,3 +37,5 @@ int _printf(const char *format, ...)
 	}
 	return (cmp);
 }
+=======
+>>>>>>> 960c3c4ef57b5ed99a6f62919f76b36c30cd2476
