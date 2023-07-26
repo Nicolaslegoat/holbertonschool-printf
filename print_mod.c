@@ -6,7 +6,7 @@
  */
 int print_mod(va_list args)
 {
-	void args;
+	va_arg(args, int);
 
 	_myputchar('%');
 
