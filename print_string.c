@@ -17,6 +17,6 @@ int print_string(va_list args)
 
 	for (index = 0; str[index] != '\0'; index++)
 		cmp_func += _myputchar(str[index]);
-	
+
 	return (cmp_func);
 }

@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 {
 	int index = 0, cmp = 0, cmp_func = 0;
 	va_list args;
-	
+
 	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			index++;
 		}
 		else
-			(cmp == -1) ? (_myputchar(format[index])) : (cmp += _myputchar(format[index]));
+(cmp == -1) ? (_myputchar(format[index])) : (cmp += _myputchar(format[index]));
 		if (cmp != -1)
 			cmp += cmp_func;
 	}
