@@ -12,6 +12,16 @@ int print_string(va_list args)
 
 	if (!str)
 		str = "(nil)";
+
+	if (str == NULL)
+	{
+		_myputchar('(');
+		_myputchar('N');
+		_myputchar('U');
+		_myputchar('L');
+		_myputchar('L');
+		_myputchar(')');
+	}
 	if (str[0] == '\0')
 		return (-1);
 
