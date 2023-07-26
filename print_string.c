@@ -12,11 +12,11 @@ int print_string(va_list args)
 
 	if (!str)
 		str = "(nil)";
-	if (str[O] == '\0')
+	if (str[0] == '\0')
 		return (-1);
 
-	while (str[index] != '\0')
+	for (index = 0; str[index] != '\0'; index++)
 		cmp_func += _myputchar(str[index]);
-	index++;
+	
 	return (cmp_func);
 }
