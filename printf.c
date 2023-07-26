@@ -6,36 +6,35 @@
  */
 int _printf(const char *format, ...)
 {
-<<<<<<< HEAD
-	unsigned int list = 0, cmp = 0;
+	int index = 0, cmp = 0, cmp_func = 0;
 	va_list args;
-
+	
 	va_start(args, format);
-
-	for (; format[list] != '\0'; list++)
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
+	for (; format[index]; index++)
 	{
-		if (format[list] != '%')
-		_myputchar(format[list]);
-		else if (format[list + 1] == 'c')
+		if (format[index] == '%')
 		{
-			_myputchar(va_arg(args, int));
-			list++;
+			if (!(format[index + 1] == ' ') && !format[index + 2])
+			{
+				cmp = -1;
+				break;
+			}
+			cmp_func += get_func(format[index + 1], args);
+			if (cmp_func == 0)
+				cmp += _myputchar(format[index + 1]);
+			if (cmp_func == -1)
+				cmp = -1;
+			index++;
 		}
-		else if (format[list + 1] == 's')
-		{
-			int r_value = _string(va_arg(args, char *));
-
-			list++;
-			cmp += (r_value - 1);
-		}
-		else if (format[list + 1] == '%')
-		{
-			_myputchar('%');
-			list++;
-		}
-		cmp += 1;
+		else
+			(cmp == -1) ? (_myputchar(format[index])) : (cmp += _myputchar(format[index]));
+		if (cmp != -1)
+			cmp += cmp_func;
 	}
+	va_end(args);
 	return (cmp);
 }
-=======
->>>>>>> 960c3c4ef57b5ed99a6f62919f76b36c30cd2476
