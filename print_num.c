@@ -2,7 +2,7 @@
 /**
  * print_num - print integer and decimal
  * @args: arguments
- * Return: sucess
+ * Return: sucess.
  */
 int print_num(va_list args)
 {
