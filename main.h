@@ -5,7 +5,7 @@
 #include <stdarg.h>
 
 /**
- * struct format - Struct for format
+ * struct specifiers - Struct for format
  * @specifiers: Struct format
  * @f: the function associed
  *
@@ -19,7 +19,7 @@ typedef struct specifiers
 
 int _myputchar(char c);
 int _printf(const char *format, ...);
-int get_func( char conv, va_list args);
+int get_func(char conv, va_list args);
 
 
 int print_char(va_list args);
