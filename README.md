@@ -4,18 +4,17 @@
 
 -Compilation command : gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
--Nous sommes authorisés a utiliser plusieurs editeurs tel que VI , VIM ainsi que EMACS.
--Nous utiliserons la commande (gcc) qui utilise les options (-Wall -Werror -Wextra -pedantic -std=gnu89) pour compiler sur Ubuntu 20.
--L'intégralité de nos fichiers retournera a la ligne.
--On va créer un README.md.
--Nous verifierons nos codes avec Betty.
--Nous n'utiliserons pas de variables globales.
--Nous n'utiliserons pas plus de 5 fonctions par fichiers.
--Nous creeront pas de fichiers main.c et on ne le pushera pas.
--Nous inclueront tous nos prototypes dans le main.h et nous les pusheront.
--Sans utiliser la fonction _putchar.
+-We are allowed to use several editors such as VI, VIM, and EMACS.
+-We will use the command (gcc) with the options (-Wall -Werror -Wextra -pedantic -std=gnu89) to compile on Ubuntu 20.
+-All of our files will return to the line.
+-We will create a README.md.
+-We will check our code with Betty.
+-We will not use global variables.
+-We will not use more than 5 functions per file.
+-We will not create a main.c file, and we will not push it.
+-We will include all our prototypes in the main.h and push them.
+-Without using the _putchar function.
 
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -30,4 +29,4 @@ int main(void)
 {   printf("Project Printf of Eric & Nicolas\n");
 return (0);
 }
-
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABGEAAAUCCAYAAACqh+5yAABbwnRFWHRteGZpbGUAJTNDbXhmaWxlJTIwaG9zdCUzRCUyMmFwcC5kaWFncmFtcy5uZXQlMjIlMjBtb2RpZmllZCUzRCUyMjIwMjMtMDctMjdUMTIlM0ExNSUzQTIzLjQ5MVolMjIlMjBhZ2VudCUzRCUyMk1vemlsbGElMkY1LjAlMjAoV2luZG93cyUyME5UJTIwMTAuMCUzQiUyMFdpbjY0JTNCJTIweDY0JTNCJTIwcnYlM0ExMDkuMCklMjBHZWNrbyUyRjIwMTAwMTAxJTIwRmlyZWZveCUyRjExNS4wJTIyJTIwZXRhZyUzRCUyMlF6T2F4MGtYNWtmQmxHRWRGejl0JTIyJTIwdmVyc2lvbiUzRCUyMjIxLjYuNSUyMiUzRSUwQSUyMCUyMCUzQ2RpYWdyYW0lMjBuYW1lJTNEJTIyUGFnZS0xJTIyJTIwaWQlM0QlMjIyYmRDUGFOaGRYUVFFY0Z3eVhwUSUyMiUzRSUwQSUyMCUyMCUyMCUyMCUzQ214R3JhcGhNb2RlbCUyMGR4JTNEJTIyMjMzNiUyMiUyMGR5JTNEJTIyNzU2JTIyJTIwZ3JpZCUzRCUyMjElMjIlMjBncmlkU2l6ZSUzRCUyMjEwJTIyJTIwZ3VpZGVzJTNEJTIyMSUyMiUyMHRvb2x0aXBzJTNEJTIyMSUyMiUyMGNvbm5lY3QlM0QlMjIxJTIyJTIwYXJyb3dzJTNEJTIyMSUyMiUyMGZvbGQlM0QlMjIxJTIyJTIwcGFnZSUzRCUyMjElMjIlMjBwYWdlU2NhbGUlM0QlMjIxJTIyJTIwcGFnZVdpZHRoJTNEJTIyODI3JTIyJTIwcGFnZUhlaWdodCUzRCUyMjExNjklMjIlMjBtYXRoJTNEJTIyMCUyMiUyMHNoYWRvdyUzRCUyMjAlMjIlM
