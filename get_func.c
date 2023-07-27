@@ -11,11 +11,11 @@ int get_func(char conv, va_list args)
 	int cmp_func = 0;
 
 	spec_t spec[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_mod},
-		{"d", print_num},
-		{"i", print_num},
+		{'c', print_char},
+		{'s', print_string},
+		{'%', print_mod},
+		{'d', print_num},
+		{'i', print_num},
 		{0, NULL}
 	};
 	while (spec[index].specifiers)
